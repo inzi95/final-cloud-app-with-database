@@ -61,7 +61,7 @@
         <div id="exam" class="collapse">
             {% if user.is_authenticated %}
             <div class="card-columns-vertical">
-                <form id="questionform" action="point to a submit view" method="post">
+                <form id="questionform" action="point to a submit view" method="POST">
                     {% for question in course.question_set.all %}
                     <div class="card mt-1">
                         <div class="card-header">
@@ -76,11 +76,14 @@
                                         id="{{choice.id}}" value="{{choice.id}}">{{ choice.choice_text }}
                                 </label>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
+                    {% endfor %}
                     <input class="btn btn-success btn-block" type="submit" value="Submit">
                 </form>
             </div>
+            {% endif %}
         </div>
 
 
