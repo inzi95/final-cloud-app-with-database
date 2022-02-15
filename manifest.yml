@@ -1,11 +1,11 @@
 applications:
   - name: onlinecourse
     routes:
-      - route: inzamam.eu-gb.mybluemix.net/onlinecourse
+      - route: inzamam.eu-gb.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
   - name: onlinecourse-nginx
     routes:
-      - route: inzamam.eu-gb.cf.appdomain.cloud/static
+      - route: inzamam.eu-gb.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack
