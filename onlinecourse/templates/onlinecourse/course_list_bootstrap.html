@@ -39,7 +39,7 @@
     </nav>
 
     <!-- Page content -->
-    {% if course_list && user.is_authenticated %}
+    {% if course_list and user.is_authenticated %}
     <div class="container">
         <div class="card-deck">
             {% for course in course_list %}
